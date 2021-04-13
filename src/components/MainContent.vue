@@ -16,16 +16,11 @@
           <span>read more</span>
         </div>
       </div>
-      <div class="content-image">
-        <img src="../assets/contentImage_01.png" alt="" srcset="" />
-      </div>
+      <img src="../assets/contentImage_01.png" alt="" srcset="" />
     </div>
     <div class="content-card">
-      <div class="content-image">
-        <img src="../assets/contentImage_02.png" alt="" srcset="" />
-      </div>
       <div class="content-text">
-        <div class="text right">
+        <div class="text">
           <p class="subtitle">HIKING ESSENTIALS</p>
           <h1>Picking the right Hiking Gear!</h1>
           <p>
@@ -38,12 +33,13 @@
           <span>read more</span>
         </div>
       </div>
+      <img src="../assets/contentImage_02.png" alt="" srcset="" />
     </div>
     <div class="content-card">
       <div class="content-text">
         <div class="text">
           <p class="subtitle">WHERE YOU GO IS THE KEY</p>
-          <h1>Understand Your Map & Timing</h1>
+          <h1>What level of hiker are you?</h1>
           <p>
             To start, print out the hiking guide and map. If it’s raining, throw
             them in a Zip-Lock bag. Read over the guide, study the map, and have
@@ -54,9 +50,7 @@
           <span>read more</span>
         </div>
       </div>
-      <div class="content-image">
-        <img src="../assets/contentImage_03.png" alt="" srcset="" />
-      </div>
+      <img src="../assets/contentImage_03.png" alt="" srcset="" />
     </div>
   </section>
 </template>
@@ -72,57 +66,84 @@ section {
   min-height: 100vh;
   width: 100%;
   display: flex;
-  align-items: center;
-  padding: 100px 0;
+  justify-content: center;
   flex-direction: column;
-  gap: 100px;
-
-  .content-card {
-    height: 720px;
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
+  align-items: center;
+  .content-card:nth-child(2) {
+    flex-direction: row-reverse;
     .content-text {
-      width: 55%;
-      height: 100%;
+      justify-content: flex-end;
+    }
+  }
+  .content-card {
+    min-height: 520px;
+    margin: 30px 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 80%;
+    .content-text {
+      width: 65%;
+      min-height: 100%;
       display: flex;
-      justify-content: center;
-      flex-direction: column;
-      .right {
-        align-self: flex-end;
-      }
+      justify-content: flex-start;
+      align-items: center;
       .text {
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        height: 60%;
+        width: 69%;
+        min-height: 100%;
         .subtitle {
+          font-family: Poppins;
           position: relative;
-          margin: 0 !important;
+          padding-left: 15%;
+          font-weight: 500;
+        }
+        .subtitle::before {
+          position: absolute;
+          content: "";
+          background: #545764;
+          width: 10%;
+          height: 3px;
+          left: 0;
+          top: calc(50% - 2px);
         }
         h1 {
-          margin: 0 0 5% 0;
-          font-size: 4em;
+          font-size: 3rem;
+          margin: 0;
         }
         p {
-          margin: 0 0 5% 0;
-          padding: 0;
           font-family: Poppins;
         }
         span {
           font-family: Poppins;
+          font-weight: 300;
         }
       }
     }
-    .content-image {
-      width: 45%;
-      height: 100%;
-      background: grey;
+    img {
+      max-width: 45%;
+      max-height: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  section {
+    .content-card {
+      width: 95%;
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 20px;
+      .content-text {
+        min-width: 100%;
+        justify-content: center !important;
+        .text {
+          width: 95%;
+        }
+      }
       img {
-        width: 100%;
-        height: 100%;
+        max-width: 100%;
+        min-height: 100%;
       }
     }
   }

@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="asd">
+    <!-- <div class="asd">
       <h2>MNTN</h2>
       <p>
         Get out there & discover your next slope,<br />
@@ -21,7 +21,7 @@
       <p>The Team</p>
       <p>Jobs</p>
       <p>Press</p>
-    </div>
+    </div> -->
   </footer>
 </template>
 

@@ -11,11 +11,8 @@
     </nav>
     <main>
       <div class="hero-content">
-        <p>A hiking guide</p>
-        <h1>
-          Be prepared for The<br />
-          Mountains and beyond!
-        </h1>
+        <p>hiking guide</p>
+        <h1>Be prepared for The Mountains and beyond!</h1>
         <div></div>
         <span>scroll</span>
       </div>
@@ -29,8 +26,8 @@ export default {};
 
 <style lang="scss" scoped>
 section {
-  background: url("../assets/heroBackground2.jpg");
-  height: 100vh;
+  background: url("../assets/heroBackground.jpg");
+  min-height: 100vh;
   background-size: cover;
   width: 100%;
   background-position: center;
@@ -53,7 +50,7 @@ section {
     }
   }
   main {
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -61,12 +58,25 @@ section {
     .hero-content {
       margin-top: 10%;
       height: 30%;
+      width: 50%;
       display: flex;
       flex-direction: column;
       position: relative;
       p {
         margin: 0;
         font-family: Poppins;
+        position: relative;
+        color: #545764;
+        padding-left: 12%;
+      }
+      p::before {
+        position: absolute;
+        content: "";
+        background: #545764;
+        width: 10%;
+        height: 3px;
+        left: 0;
+        top: calc(50% - 2px);
       }
       h1 {
         font-size: 4rem;
@@ -128,6 +138,46 @@ section {
         }
         100% {
           opacity: 0;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  section {
+    nav {
+      justify-content: center;
+      .menu {
+        display: none;
+      }
+      .account {
+        display: none;
+      }
+      .logo {
+        font-size: 5.5rem;
+        margin: 20px;
+      }
+    }
+    main {
+      width: 100%;
+      .hero-content {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        h1 {
+          max-width: 90%;
+          margin: 40px;
+          font-size: 10vw;
+          text-align: center;
+        }
+        p {
+          padding: 0;
+        }
+        p::before {
+          margin: 0;
+          padding: 0;
+          display: none;
         }
       }
     }
