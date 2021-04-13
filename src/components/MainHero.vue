@@ -84,6 +84,7 @@ section {
         border: 2px solid #d3d3d3d8;
         align-self: center;
         position: relative;
+        cursor: pointer;
       }
       div::before {
         position: absolute;
