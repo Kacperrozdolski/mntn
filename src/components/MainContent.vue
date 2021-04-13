@@ -13,10 +13,10 @@
             you – novice, moderate, advanced moderate, expert, or expert
             backpacker?
           </p>
-          <span>read more</span>
+          <a href="https://modernhiker.com/" target="_blank">read more</a>
         </div>
       </div>
-      <img src="../assets/contentImage_01.png" alt="" srcset="" />
+      <img src="../assets/contentImage_01.jpg" alt="" srcset="" />
     </div>
     <div class="content-card">
       <div class="content-text">
@@ -30,7 +30,11 @@
             make is wearing jeans and regular clothes, which will get heavy and
             chafe wif they get sweaty or wet.
           </p>
-          <span>read more</span>
+          <a
+            href="https://www.rei.com/learn/expert-advice/hot-weather-hiking.html"
+            target="_blank"
+            >read more</a
+          >
         </div>
       </div>
       <img src="../assets/contentImage_02.png" alt="" srcset="" />
@@ -47,7 +51,11 @@
             is as I hike. For example, I’ll read the guide and know that say, in
             a mile, I make a right turn at the junction..
           </p>
-          <span>read more</span>
+          <a
+            href="https://www.thehikinglife.com/hiking-and-backpacking-skills/navigation/"
+            target="_blank"
+            >read more</a
+          >
         </div>
       </div>
       <img src="../assets/contentImage_03.png" alt="" srcset="" />
@@ -113,9 +121,11 @@ section {
         p {
           font-family: Poppins;
         }
-        span {
+        a {
           font-family: Poppins;
           font-weight: 300;
+          text-decoration: none;
+          color: inherit;
         }
       }
     }

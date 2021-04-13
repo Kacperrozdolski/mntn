@@ -7,13 +7,15 @@
         <p>About us</p>
         <p>Blog</p>
       </div>
-      <div class="account">Account</div>
+      <div class="account">
+        Account <img src="../assets/userIcon.svg" alt="" srcset="" />
+      </div>
     </nav>
     <main>
       <div class="hero-content">
         <p>hiking guide</p>
         <h1>Be prepared for The Mountains and beyond!</h1>
-        <div></div>
+        <div @click="scrollDown"></div>
         <span>scroll</span>
       </div>
     </main>
@@ -21,7 +23,17 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "MainHero",
+  methods: {
+    scrollDown() {
+      window.scroll({
+        top: 700,
+        behavior: "smooth",
+      });
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -47,6 +59,11 @@ section {
       display: flex;
       flex-direction: row;
       gap: 20px;
+    }
+    .account {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
   }
   main {
@@ -143,6 +160,7 @@ section {
     }
   }
 }
+
 @media only screen and (max-width: 600px) {
   section {
     nav {
